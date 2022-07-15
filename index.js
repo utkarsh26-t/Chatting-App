@@ -19,7 +19,7 @@ io.on('connection', (socket) => {
         
         io.emit('received-msg', {
             msg : data.msg,
-            username : users[socket.id]
+            username : users[socket.id],
         })
 
     })
@@ -28,7 +28,6 @@ io.on('connection', (socket) => {
         users[socket.id] = data.username;
     })
 })
-
 
 
 
